@@ -16,4 +16,7 @@ class BookStoreModel(models.Model):
     author = models.CharField(max_length=50)
     category = models.CharField(max_length=30, choices=CATEGORY)
     first_published = models.DateTimeField(auto_now_add=True)
-    last_published = models.DateTimeField()
+    last_published = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return f'{self.book_name} | by {self.author}'

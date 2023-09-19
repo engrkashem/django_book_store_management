@@ -5,7 +5,7 @@
 {% block content %}
     <div class="w-75 mx-auto">
         <h1 class="">Welcome to Book Store Management System</h1>
-        <form method="post" class="">
+        <form method="post" >
             {% csrf_token %}
             {{form | crispy}}
             <input class="btn btn-info" type="submit" value="Submit" />
